@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Organization Tree</title>
+    <link rel="stylesheet" href="tree_style.css">
+</head>
+<body>
+    <div>
+        <button id="button01">横排</button>
+        <button id="button02">竖排</button>
+    </div>
+    <div class="tree">
+        <div class="treeContainer" id="treeContainer"></div>
+        <svg class="treeSvg" id="treeSvg"></svg>            
+    </div>  
+
+    <script src="tree.js"></script>
+    <script>
+        var testData = {
+            "display": 1,
+            "name": "Parent",
+            "nodes": [
+                {
+                    "name": "Child1",
+                    "nodes": [
+                        {
+                            "name": "Child11",
+                            "nodes": [],
+                            "pk": 3
+                        },
+                        {
+                            "name": "Child12",
+                            "nodes": [],
+                            "pk": 4                            
+                        },
+                        {
+                            "name": "Child13",
+                            "nodes": [],
+                            "pk": 5
+                        },
+                        {
+                            "name": "Child14",
+                            "nodes": [],
+                            "pk": 6                            
+                        }
+                    ],
+                    "pk": 1,
+                },
+                {
+                    "name": "Child2",
+                    "nodes": [
+                        {
+                            "name": "Child21",
+                            "nodes": [],
+                            "pk": 7
+                        },
+                        {
+                            "name": "Child22",
+                            "nodes": [],
+                            "pk": 8                            
+                        },
+                        {
+                            "name": "Child23",
+                            "nodes": [],
+                            "pk": 9
+                        }
+                    ],
+                    "pk": 2,
+                }
+            ],
+            "pk": 0,
+        };
+        var tabTree = new Tree({
+            "containerId": "treeContainer",
+            "svgId": "treeSvg"
+        });
+        tabTree.draw(testData);
+
+        document.getElementById("button01").addEventListener("click", function(){
+            testData.display = 1;
+            tabTree.draw(testData);
+        });
+
+        document.getElementById("button02").addEventListener("click", function(){
+            testData.display = 0;
+            tabTree.draw(testData);
+        });
+    </script>
+</body>
+</html>

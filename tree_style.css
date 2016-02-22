@@ -1,0 +1,54 @@
+.tree{
+    position: relative;
+    display: inline-block;
+}
+
+.tree .treeSvg{
+    position: absolute;
+    left: 0; 
+    top: 0; 
+    z-index: 20;     
+}
+
+.tree .treeContainer{
+    display: inline-block;
+}
+
+.tree .treeContainer .editNode{
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+    z-index: 30;
+    min-width: 140px; 
+    max-width: 174px;
+    height: 32px; 
+    border: 1px solid #d4d4d4;
+    border-top-color: #e6e6e6;
+    border-bottom-color: #c0c0c0;
+    border-radius: 3px;
+    text-align: center; 
+    font: 12px "Microsoft YaHei","Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #282828; 
+    line-height: 32px; 
+    box-shadow: 0 1px 1px #c0c0c0; 
+    cursor: default;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    background-color: #f7f7f7;    
+    background: -webkit-linear-gradient(#fefefe, #f7f7f7, #eeeeee); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#fefefe, #f7f7f7, #eeeeee); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#fefefe, #f7f7f7, #eeeeee); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#fefefe, #f7f7f7, #eeeeee); /* Standard syntax */
+}
+
+.tree .treeContainer .editNode .editNodeName{
+    display: inline-block;
+    width: 109px;
+    padding: 4px 0;
+    line-height: 1;
+    text-align: center;    
+}
